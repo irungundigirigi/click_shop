@@ -1,20 +1,19 @@
-import {React,Fragment} from 'react';
-import './App.css';
-
-//Components
-import InputTodo from './components/InputTodo';
-import ListTodos from './components/ListTodos';
- 
-
+import "./App.css";
+import Header from './Header.js'
+import {CartState} from './context/Context';
+import ProductCard from './components/ProductCard';
 
 function App() {
-  return (
-    <div className="container">
-      <InputTodo />
-      <ListTodos />
-      
+  const {state: {products}} = CartState();
+  console.log(products);
+  return <div className="App">
+    <Header />
+    <div className="products">
+      {products.map((product) => {
+        return <ProductCard product={product} key={product.id}/>
+      })}
     </div>
-  );
+  </div>
 }
 
-export default App;
+ export default App;
