@@ -19,3 +19,9 @@
 p {
   font-size: 10px;
 }
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}

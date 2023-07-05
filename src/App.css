@@ -11,9 +11,6 @@ a {
 .form-control {
   color: white;
 }
-.App {
-
-}
 .products {
   display: flex;
   flex-direction: row;
@@ -26,4 +23,7 @@ a {
   width:90px;
   margin-bottom: 10px;
   object-fit:scale-down;
+}
+.body {
+  padding-top: 60px;
 }
